@@ -1,0 +1,85 @@
+.faq{
+    padding: 80px 0 40px;
+    position: relative;
+}
+.faq .decor{
+    position: absolute;
+    top: 163px;
+    right: 0px;
+    opacity: .5;
+    z-index: -1;
+}
+.faq h2{
+    max-width: 667px;
+    margin-bottom: 20px;
+}
+.questions-list{
+    width: 100%;
+}
+.questions-list li{
+    background: rgba(4, 41, 174, 0.04);
+    border-radius: 20px;
+    margin-bottom: 16px;
+    padding: 20px 23px;
+}
+.question-ttl-btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+}
+.question-ttl-btn.active{
+    margin-bottom: 15px;
+}
+.collapse-btn{
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(4, 41, 174, 1);
+    color: rgba(249, 249, 249, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    position: relative;
+}
+.collapse-btn span{
+    display: block;
+    width: 12px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 1);
+}
+.collapse-btn span:first-child{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+.question-ttl-btn.active .collapse-btn{
+    border: 1px solid rgba(4, 41, 174, 1);
+    background-color: transparent;
+}
+
+.question-ttl-btn.active .collapse-btn span:first-child{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    background-color: rgba(4, 41, 174, 1);
+}
+
+.question-ttl-btn.active .collapse-btn svg{
+    transform: rotate(180deg);
+    transition: transform 0.3s ease-out;
+}
+.questions-list p{
+    font-weight: 400;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+

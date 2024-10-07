@@ -1,0 +1,11 @@
+.articles{
+    padding: 40px 0;
+    position: relative;
+}
+.articles .decor{
+    position: absolute;
+    top: 0;
+    left: -183px;
+    z-index: -1;
+    opacity: .5;
+}
