@@ -1,8 +1,13 @@
 const header = document.querySelector(".header");
 const burger = document.querySelector(".burger");
-
+const headerNav = document.querySelector(".header nav");
 
 burger.addEventListener("click", () => {
+  headerNav.classList.toggle("active");
+})
+
+if(window.innerWidth < 950) {
+  burger.addEventListener("click", () => {
     header.classList.toggle("mobile-header");
     if (header.classList.contains("mobile-header")) {
         document.body.classList.add("no-scroll");
@@ -10,6 +15,7 @@ burger.addEventListener("click", () => {
         document.body.classList.remove("no-scroll");
     }
 })
+}
 
 document.addEventListener('DOMContentLoaded', function() {
     const tabButtons = document.querySelectorAll('.tab-button');
@@ -29,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+// ---------------------------faq-----------------------------
 let coll = document.getElementsByClassName("collapsible");
 
 
@@ -45,7 +52,7 @@ for (let i = 0; i < coll.length; i++) {
   });
 }
 
-
+// ---------------------------------news-----------------------------
 const swiper = new Swiper('.news-swiper.swiper', {
     loop: true,
   
@@ -73,7 +80,7 @@ const swiper = new Swiper('.news-swiper.swiper', {
     }
   }});
 
-
+// --------------------------------------letters----------------------------
 const letterSwiper = new Swiper('.letters .swiper', {
     navigation: {
       nextEl: '.swiper-button-next',
@@ -107,21 +114,6 @@ const letterSwiper = new Swiper('.letters .swiper', {
       }
   }
 })
-
-
-// --------------------------------------banner-----------------------------
-const banner = document.querySelector(".banner");
-const bannerContent = document.querySelector(".banner-content");
-const bannerImg = document.querySelector(".banner-img");
-const bannerInfo = document.querySelector(".banner-info-wrapper");
-const bannerContentText = document.querySelector(".banner-content p");
-console.log(bannerInfo.offsetHeight);
-
-if (window.innerWidth < 950) {
-    bannerImg.style.top = bannerContent.offsetHeight + "px";
-    banner.style.paddingBottom = bannerInfo.offsetHeight + bannerImg.offsetHeight + 30 + "px";
-    bannerInfo.style.top = bannerContent.offsetHeight + bannerImg.offsetHeight + "px";
-}
 
 
 // ----------------------------popup----------------------------
